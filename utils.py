@@ -3,7 +3,7 @@ import numpy as np
 from PIL import Image
 import io
 
-model = tf.keras.models.load_model("model/image_segmentation_classifier.h5")
+model = tf.keras.models.load_model("models/image_segmentation_classifier.h5")
 
 def predict_emotion(image_bytes):
     image = Image.open(io.BytesIO(image_bytes)).convert('RGB')
