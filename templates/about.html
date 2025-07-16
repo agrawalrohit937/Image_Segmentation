@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - EmotionAI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Emotion<span class="ai-accent">AI</span></div>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/predict">Predict</a></li>
+        <li><a href="/about" class="active">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">🌓</button>
+    </nav>
+  </header>
+
+<section class="about-section">
+  <div class="glass-card">
+    <h2>About the Project</h2>
+    <p>
+      This project is an AI-powered <strong>Emotion Detection System</strong> that uses a deep learning image segmentation model to identify whether a face is <strong>happy 😊</strong> or <strong>sad 😢</strong>.
+    </p>
+    <p>
+      Built using <span class="credit">TensorFlow</span>, <span class="credit">Flask</span>, and modern <span class="credit">HTML/CSS/JS</span>, this web application is designed to provide a fast and interactive prediction experience.
+    </p>
+    <p>
+      You can upload any image of a face, and our model will smartly predict the emotional tone of the face in just a second.
+    </p>
+    <p>
+      Created with ❤️ by <span class="credit">Rohit Agrawal</span>
+    </p>
+  </div>
+</section>
+
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

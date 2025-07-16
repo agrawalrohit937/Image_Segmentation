@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Predict - EmotionAI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Emotion<span class="ai-accent">AI</span></div>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/predict" class="active">Predict</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">🌓</button>
+    </nav>
+  </header>
+
+<main class="hero predict-hero light-version">
+  <div class="hero-content">
+    <h1>Upload Image to Detect Emotion</h1>
+    <form method="POST" enctype="multipart/form-data" class="upload-form">
+      <div class="upload-box light-box" id="drop-area">
+        <p>Drag & drop or click to select an image</p>
+        <input type="file" name="file" id="fileElem" accept="image/*" required />
+      </div>
+      <div id="preview-container"></div>
+      <div class="loader" id="loader" style="display: none;"></div>
+      <button class="btn" type="submit">Predict Emotion</button>
+    </form>
+    
+  </div>
+</main>
+
+    
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
+

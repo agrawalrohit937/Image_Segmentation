@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EmotionAI - Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">EmotionAI</div>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/predict">Predict</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">🌓</button>
+    </nav>
+  </header>
+
+  <main class="result">
+    <h2>Prediction Result</h2>
+    <div class="result-emotion {{ 'happy' if 'Happy' in prediction else 'sad' }}">
+      <h1>{{ prediction }}</h1>
+      <p>
+        {% if 'Happy' in prediction %}
+          Looks like someone’s having a great time! Keep smiling 😄
+        {% else %}
+          Seems like a rough moment. Stay strong 💙 You're not alone.
+        {% endif %}
+      </p>
+    </div>
+    <a class="btn" href="/predict">Try Another</a>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
