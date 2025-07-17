@@ -18,7 +18,7 @@ import numpy as np
 import cv2
 
 # Load TFLite Model (ONCE)
-interpreter = tf.lite.Interpreter(model_path="image_segmentation_classifier.tflite")
+interpreter = tf.lite.Interpreter(model_path="models/image_segmentation_classifier.tflite")
 interpreter.allocate_tensors()
 
 input_details = interpreter.get_input_details()
